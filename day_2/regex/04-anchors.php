@@ -4,6 +4,7 @@ require __DIR__ . "/vendor/autoload.php";
 
 function phoneNumber ($str) {
     return preg_match("/^[-\d]+$/", "$str") === 1;
+    // only looking for numbers and dashes, nothing else.
 }
 
 dump(phoneNumber("blah")); // false
