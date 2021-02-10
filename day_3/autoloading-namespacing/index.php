@@ -46,3 +46,32 @@ dump($book->currentPage()); // 13 - start on page 1
 // read another 25 pages
 $book->read(25);
 dump($book->currentPage()); // 38
+
+echo "\nQuestion 4:\n";
+
+use App\Shopping\BasketItem;
+
+$item = new BasketItem("coffee", 3.50);
+
+// get the type
+dump($item->type()); // "coffee"
+
+// get the price as a number
+dump($item->price()); // 3.5
+
+// get the price as a formatted string
+dump($item->priceFormatted()); // "£3.50"
+
+echo "\nQuestion 5:\n";
+
+use App\Cooking\Ingredient;
+
+// ingredients take a name, followed by an array of dietary information
+$flour = new Ingredient("Flour", ["gluten"]);
+$eggs = new Ingredient("Eggs", ["animal produce"]);
+
+dump($flour->name()); // "Flour"
+dump($flour->vegan()); // true
+
+dump($eggs->name()); // "Eggs"
+dump($eggs->vegan()); // false
