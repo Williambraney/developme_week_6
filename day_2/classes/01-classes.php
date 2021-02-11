@@ -2,7 +2,8 @@
 
 require __DIR__ . "/vendor/autoload.php";
 
-class Phone {
+class Phone 
+{
     private $make;
     private $model;
 
